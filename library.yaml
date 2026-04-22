@@ -10,6 +10,21 @@ default_dirs:
     - global: ~/.claude/commands/
 
 library:
-  skills: []
+  skills:
+    - name: asia-report
+      description: Generate and audit the REX Asia Report. Pulls raw data from PostgreSQL, computes derived values, runs sanity checks, cross-validates against Grace's source data.
+      source: C:/Users/RyuEl-Asmar/.claude/skills/asia-report/SKILL.md
+    - name: classify
+      description: Scan Bloomberg data for new/unmapped ETPs and classify them into LI, CC, Crypto, Defined, or Thematic.
+      source: C:/Users/RyuEl-Asmar/.claude/skills/classify/SKILL.md
+    - name: karpathy-llm-wiki
+      description: Build and maintain a personal LLM-powered knowledge base following Karpathy's wiki pattern. Provides ingest/query/lint operations.
+      source: https://github.com/Astro-Han/karpathy-llm-wiki/blob/main/SKILL.md
+    - name: reports
+      description: Full daily report workflow for rexfinhub — SEC scrape, Bloomberg sync, classify new funds, preview, send.
+      source: C:/Users/RyuEl-Asmar/.claude/skills/reports/SKILL.md
+    - name: sync
+      description: Full data sync pipeline — SEC scrape, structured notes, market data, classification, screener cache, Render upload.
+      source: C:/Users/RyuEl-Asmar/.claude/skills/sync/SKILL.md
   agents: []
   prompts: []
